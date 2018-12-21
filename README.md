@@ -11,4 +11,4 @@ map should be rectangular
 
 application have friendly UI
 
-![a:](https://github.com/Ultraparalon/FDF/edit/master/scr1.png)
+![a:](https://github.com/Ultraparalon/FDF/edit/master/screenshots/scr1.png)
