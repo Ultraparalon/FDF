@@ -10,3 +10,5 @@ all numbers in map file are z-coordinates
 map should be rectangular
 
 application have friendly UI
+
+![a:](https://github.com/Ultraparalon/FDF/edit/master/scr1.png)
