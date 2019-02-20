@@ -11,6 +11,23 @@
 /* ************************************************************************** */
 
 #include "fdf.h"
+#include <time.h>
+
+static void	vs_fps(t_map *map)
+{
+	static unsigned int frame;
+	static unsigned int fps;
+	static time_t		sec;
+
+	frame++;
+	mlx_string_put(map->mlx, map->window, 200, 5, 0xFFFFFF, ft_itoa(fps));
+	if (sec != time(0))
+	{
+		sec = time(0);
+		fps = frame;
+		frame = 0;
+	}
+}
 
 static void	ft_help(t_map *map)
 {
@@ -34,6 +51,7 @@ int			ft_loop(t_map *map)
 	ft_bzero(map->img->img_ptr, W_WIDTH * W_HEIGHT * map->img->bit_per_pix);
 	map->colour = ft_rainbow(1, map->colour);
 	ft_create_map(map);
+	vs_fps(map);
 	if (map->in.key & (1 << 16))
 		map->in.size++;
 	if (map->in.key & (1 << 17) && map->in.size > 1)		

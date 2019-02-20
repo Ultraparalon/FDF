@@ -71,7 +71,6 @@ void			ft_wizard(char *file_name, char *base_colour)
 	mlx_hook(map->window, 17, 0, ft_red_cross, map);
 	mlx_hook(map->window, 2, 0, ft_key_down, map);
 	mlx_hook(map->window, 3, 0, ft_key_up, map);
-	// mlx_hook(map->window, 2, 0, ft_rep_key, map);
 	mlx_hook(map->window, 4, 0, hook_mousedown, &map->in);
 	mlx_hook(map->window, 5, 0, hook_mouseup, &map->in);
 	mlx_hook(map->window, 6, 0, hook_mousemove, &map->in);
